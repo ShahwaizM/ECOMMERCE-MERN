@@ -1,0 +1,91 @@
+.about-detail .navbar a {
+  color: rgb(255, 255, 255) !important;
+}
+.about-detail .navbar a:hover {
+  color: crimson !important;
+}
+.about-banner .navbar-brand {
+  color: white;
+}
+.about-banner {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),
+    url("../assets/banner3.jpg");
+  background-position: center center;
+  background-repeat: none;
+  background-size: cover;
+  min-height: calc(500px);
+  max-width: 100%;
+}
+.about-title {
+  max-width: 800px;
+  padding-top: 100px;
+  margin: 0 auto;
+  color: white;
+}
+@media only screen and (max-width: 400px) {
+  .about-title h1 {
+    font-size: 60px !important;
+  }
+}
+.about-title h1 {
+  font-size: 80px;
+}
+.contactus {
+  background-color: antiquewhite;
+}
+.contactus p {
+  font-size: large;
+}
+info {
+  padding: calc(80px) 0px;
+}
+.info {
+  position: relative;
+  color: #ffffff; /* Text color */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://img.freepik.com/free-photo/arrangement-black-friday-shopping-carts-with-copy-space_23-2148667047.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1721952000&semt=ais_user") !important;
+}
+.orange a,
+.orange {
+  color: #e48a41 !important;
+}
+.info-content {
+  position: relative;
+  z-index: 1; /* Set the z-index for the text */
+}
+
+.info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 0; /* Set the z-index behind the text */
+}
+.list-inline-item a.active {
+  color: red !important;
+}
+.info-title {
+  padding-bottom: calc(10px);
+}
+.info-title h1,
+.third-desc {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 52px;
+  letter-spacing: 0em;
+  line-height: 1em;
+  text-transform: none;
+}
+.info-desc h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 32px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0em;
+  line-height: 1em;
+  text-transform: none;
+}

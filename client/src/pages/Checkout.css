@@ -1,0 +1,7 @@
+.checkout-input {
+  height: 50px;
+  border: 2px solid rgb(0, 0, 128) !important;
+}
+.form-group {
+  display: grid;
+}

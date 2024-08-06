@@ -1,0 +1,44 @@
+.centered-button {
+  margin: 2px;
+  margin-top: 8px;
+  padding: 10px 20px;
+}
+.centered-button {
+  border: 2px solid white;
+  padding: 21px 34px;
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.125em;
+  background-color: transparent;
+  margin: 30px auto;
+}
+
+.centered-button:hover {
+  background-color: #fff;
+  color: black;
+}
+.respo {
+  text-align: center !important;
+  margin: 0px auto;
+  border-radius: 20px;
+  border: 3px solid white;
+  padding: 40px 40px;
+  color: #fff !important;
+  transform: scale(0.5);
+  animation: zoomIn 1s ease-in-out forwards;
+}
+.thanku {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/banner3.jpg") !important;
+}
+.thanku h1 {
+  font-size: 80px;
+}
+.mail {
+  font-size: 120px;
+}
+.thanku p {
+  font-size: 45px;
+}

@@ -1,0 +1,317 @@
+.navbar-toggler {
+  color: #fff;
+  border: white;
+  background-color: #fff;
+}
+.banner-title {
+  max-width: 600px;
+  text-align: left;
+  margin-top: 200px !important;
+}
+.banner2-title {
+  max-width: 700px !important;
+  text-align: left;
+  padding-top: 100px;
+}
+
+.red {
+  color: crimson !important;
+}
+.banner2-title h1 {
+  font-size: 65px;
+}
+.products-section {
+  background-color: rgb(241 241 241);
+  padding-bottom: 30px;
+  font-family: cursive;
+}
+.banner-title h1 {
+  font-size: 80px;
+}
+.headerpad {
+  padding: 40px 0px !important;
+}
+.products div img {
+  background-color: rgb(255, 255, 255);
+  margin: 5px 0px;
+}
+nav {
+  background-color: transparent !important;
+  font-size: 22px;
+}
+nav a,
+navbar-brand {
+  color: rgb(79, 39, 47) !important;
+  margin-left: 4px;
+  font-size: 18px !important;
+  font-family: cursive !important;
+  font-weight: 600 !important;
+  text-align: start;
+  cursor: pointer;
+}
+
+.animated {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  animation: fadeInDown;
+}
+.br {
+  font-weight: bolder !important;
+  font-style: oblique !important;
+}
+@media only screen and (max-width: 991px) {
+  .navbar-collapse {
+    border-top: 1px solid#180c0c;
+  }
+}
+
+a:hover {
+  color: rgb(255, 255, 255) !important;
+}
+.products img {
+  height: -webkit-fill-available;
+  width: 100%;
+  padding: 28px !important;
+  border-radius: 14px !important;
+  object-fit: contain;
+  /* border-style: dotted; */
+}
+.products {
+  margin-bottom: 35px;
+}
+.products div {
+  margin: 35px 0px;
+  height: calc(400px);
+}
+.products img:hover {
+  transform: scale(
+    1.01
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.banner,
+.banner2 {
+  width: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+}
+.banner {
+  background-position: center 0;
+
+  background-image: url("../assets/banner.jpg");
+  min-height: calc(800px);
+}
+.banner2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0.5, 0.3)),
+    url("../assets/banner2.jpeg");
+  min-height: calc(600px);
+}
+.btn-shop {
+  padding: 18px 50px !important;
+  font-size: 20px !important;
+  background-color: crimson !important;
+  border-radius: 14px !important;
+  font-weight: 600 !important;
+  border-color: crimson !important;
+  color: white !important;
+}
+.btn-shop:hover {
+  background-color: aqua !important;
+  color: black !important;
+  border-color: aqua !important;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInleft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInright {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animated {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+.fadeInleft {
+  animation: fadeInleft 1.5s forwards;
+  opacity: 0;
+}
+.fadeInright {
+  animation: fadeInright 1.5s forwards;
+  opacity: 0;
+}
+.navbar {
+  animation-name: fadeInDown;
+}
+.footer {
+  background-color: #141416;
+  height: min-content;
+  color: white;
+  font-family: cursive !important;
+  min-width: 100%;
+  padding-top: 10px;
+}
+.subscribe,
+.footer2 {
+  padding: 70px 0px;
+}
+.subscribe1 h3 {
+  padding: 0px 20px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: start;
+  color: #fff;
+  letter-spacing: 0em;
+  line-height: 1em;
+  font-size: 24px;
+}
+.subscribe {
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+.email {
+  border: 1px solid #333;
+  border-right: none;
+}
+.input-box input::placeholder {
+  color: white !important;
+}
+.form-control:focus {
+  color: white !important;
+  background-color: transparent !important;
+  text-transform: none;
+}
+.input-box {
+  display: flex;
+
+  color: #fff !important;
+}
+.input-box input {
+  background-color: transparent;
+  height: 65px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  width: 100%;
+  border: 1px solid #333;
+  border-radius: 0px !important;
+  /* color: #ffffff !important; */
+  font-family: "GothamMedium", Helvetica, Arial, sans-serif;
+  padding-left: 30px;
+}
+.email-btn {
+  background-color: transparent;
+  height: 65px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: #ffffff !important;
+  font-family: "GothamMedium", Helvetica, Arial, sans-serif;
+  padding-left: 30px;
+}
+.email-btn {
+  border: none;
+  border: 1px solid #333;
+  padding: 0px 30px;
+  width: 170px;
+  letter-spacing: 1.87px;
+  right: 0;
+  top: 0;
+}
+.email-btn:hover {
+  background-color: #333;
+}
+.social-icons,
+.list-inline {
+  text-align: start;
+}
+.social-icons li {
+  font-size: 22px;
+  margin: 5px;
+  text-align: start !important;
+  /* border:1px solid white; */
+  padding: 0px;
+}
+.social-icons li a {
+  color: white !important;
+  /* padding: 9.5px; */
+  text-align: start !important;
+  height: 10px;
+  width: 10px;
+}
+.whyus {
+  margin: 30px auto;
+}
+.whyus h1 {
+  font-family: cursive;
+}
+.whyus-block {
+  background-color: rgb(213, 211, 211);
+  margin: 10px auto;
+  border-radius: 14px;
+  padding: 55px 30px;
+  text-align: start;
+}
+
+/* .card-footer{
+	margin:0 45px;
+} */
+.list {
+  list-style: none;
+  padding: 0px;
+  text-align: start !important;
+
+  margin: 25px 0px;
+}
+.col-md-3 h2,
+.col-md-3 h3 {
+  text-align: start !important;
+  font-size: 20px;
+}
+.list-item {
+  padding: 4px 0px;
+  text-align: start;
+  text-transform: none;
+}
+.list-item a {
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 16px !important;
+  text-decoration: none !important;
+  text-align: start !important;
+}
+.list-item a:hover {
+  text-decoration: none !important;
+  color: #ffffff !important;
+}
+.footer-copyright {
+  font-size: 12px;
+  letter-spacing: 1.87px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+.footer a:hover {
+  color: crimson !important;
+}

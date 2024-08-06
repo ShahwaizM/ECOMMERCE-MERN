@@ -1,0 +1,82 @@
+.form-center {
+  /* margin: 100px 200px; */
+  border-radius: 40px;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 40px;
+}
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #008100;
+  border-color: #008100;
+}
+.tab-content .btn {
+  margin-left: 4px;
+  border-radius: 100%;
+  border: 1px solid black;
+}
+.product-detail .navbar-brand {
+  color: white;
+  cursor: pointer;
+}
+.form-outline {
+  display: block;
+}
+.form-outline input {
+  display: flex;
+  width: 100%;
+}
+.login {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  color: white;
+  border: 2px solid white !important;
+  margin: 40px 0px !important;
+  padding: 20px !important;
+  height: max-content;
+  max-width: 500px;
+  border-radius: 18px;
+  margin-bottom: 50px !important;
+}
+.fa-user {
+  font-size: 160px !important;
+  color: white;
+  text-align: center !important;
+  margin: auto auto !important;
+}
+.login-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/banner3.jpg") !important;
+}
+.login-intro {
+  color: white;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
+  padding-top: 40px;
+  text-transform: none;
+  font-family: "Times New Roman", Times, serif;
+}
+.login-intro h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+.form-group {
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+.sign-link {
+  color: rgb(20, 213, 178) !important;
+  text-decoration: none;
+}
+.sign-link:hover {
+  color: red !important;
+}
+.pointer {
+  cursor: pointer;
+}
+.forgot-pass {
+  margin: auto;
+}

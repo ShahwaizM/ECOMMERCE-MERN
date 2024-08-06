@@ -1,0 +1,25 @@
+/* AdminDashboard.css */
+.admin-dashboard {
+  background-color: #f8f9fa;
+  height: 100vh;
+}
+
+.admin-sidebar {
+  background-color: #343a40;
+  color: white;
+  height: 100%;
+}
+
+.admin-sidebar .nav-link {
+  color: white;
+}
+
+.admin-sidebar .nav-link:hover {
+  background-color: #495057;
+}
+admin-form input:focus {
+  color: black;
+}
+.admin-dashboard .form-control {
+  color: black !important;
+}
