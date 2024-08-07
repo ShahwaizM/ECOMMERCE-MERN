@@ -35,7 +35,7 @@ const Store = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/category/get-category"
+        "https://fashionhubserver.vercel.app/api/v1/category/get-category"
       );
       if (data?.success) {
         setCategories(data?.category);
@@ -54,7 +54,7 @@ const Store = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/product-list/${page}`
+        `https://fashionhubserver.vercel.app/api/v1/product/product-list/${page}`
       );
       setLoading(false);
       setProducts(data.products);
@@ -69,7 +69,7 @@ const Store = () => {
   const getTotal = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/product/product-count"
+        "https://fashionhubserver.vercel.app/api/v1/product/product-count"
       );
       setTotal(data?.total);
     } catch (error) {
@@ -96,7 +96,7 @@ const Store = () => {
     if (keyword.trim()) {
       try {
         const { data } = await axios.get(
-          `http://localhost:8080/api/v1/product/search/${keyword}`
+          `https://fashionhubserver.vercel.app/api/v1/product/search/${keyword}`
         );
         setProducts(data);
         setTotal(data.length);
@@ -130,7 +130,7 @@ const Store = () => {
   const filterProduct = async () => {
     try {
       const { data } = await axios.post(
-        `http://localhost:8080/api/v1/product/product-filters/${page}`,
+        `https://fashionhubserver.vercel.app/api/v1/product/product-filters/${page}`,
         {
           checked,
           radio,
@@ -259,7 +259,7 @@ const Store = () => {
                         >
                           <img
                             class="img-responsive card-img-top"
-                            src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`}
+                            src={`https://fashionhubserver.vercel.app/api/v1/product/product-photo/${p._id}`}
                             alt="Card  cap"
                           ></img>
                         </Link>

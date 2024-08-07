@@ -28,7 +28,7 @@ const Contact = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "http://localhost:8080/api/v1/contact/postcontact",
+        "https://fashionhubserver.vercel.app/api/v1/contact/postcontact",
         formData
       );
       setFormStatus("Form submitted successfully!");

@@ -19,9 +19,9 @@ import Navbarr from "../components/navbar.js";
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
 //     try {
-//       const url = "http://localhost:8080/api/v1/auth/register";
+//       const url = "https://fashionhubserver.vercel.app/api/v1/auth/register";
 //       const res = await axios.post(
-//         "http://localhost:8080/api/v1/auth/register",
+//         "https://fashionhubserver.vercel.app/api/v1/auth/register",
 //         {
 //           name,
 //           email,
@@ -193,7 +193,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:8080/api/v1/auth/register",
+        "https://fashionhubserver.vercel.app/api/v1/auth/register",
         {
           name,
           answer,

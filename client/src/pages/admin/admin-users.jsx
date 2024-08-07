@@ -11,7 +11,7 @@ const AdminUsers = () => {
     const fetchUsers = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:8080/api/v1/auth/users"
+          "https://fashionhubserver.vercel.app/api/v1/auth/users"
         );
         if (data.success) {
           setUsers(data.users);

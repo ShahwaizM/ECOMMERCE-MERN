@@ -27,7 +27,7 @@ const Foote = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/subscriber/subscribe",
+        "https://fashionhubserver.vercel.app/api/v1/subscriber/subscribe",
         { email }
       );
       setMessage(response.data.message);

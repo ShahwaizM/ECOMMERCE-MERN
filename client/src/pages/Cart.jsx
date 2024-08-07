@@ -47,7 +47,7 @@ const Cart = () => {
 
     const body = { products: cart };
     const response = await fetch(
-      "http://localhost:8080/api/v1/stripe/create-checkout-session",
+      "https://fashionhubserver.vercel.app/api/v1/stripe/create-checkout-session",
       {
         method: "POST",
         headers: {
@@ -112,7 +112,7 @@ const Cart = () => {
                           >
                             <div className="col-md-2 col-lg-2 col-xl-2">
                               <img
-                                src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`}
+                                src={`https://fashionhubserver.vercel.app/api/v1/product/product-photo/${p._id}`}
                                 className="img-fluid rounded-3"
                                 alt={p.name}
                               />

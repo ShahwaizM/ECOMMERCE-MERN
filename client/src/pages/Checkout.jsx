@@ -45,7 +45,7 @@ const CheckoutPage = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:8080/api/v1/stripe/create-checkout-session",
+        "https://fashionhubserver.vercel.app/api/v1/stripe/create-checkout-session",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

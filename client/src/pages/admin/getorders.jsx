@@ -16,7 +16,7 @@ const AllOrders = () => {
     const fetchAllOrders = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:8080/api/v1/auth/all-orders"
+          "https://fashionhubserver.vercel.app/api/v1/auth/all-orders"
         );
         console.log("Fetched Orders:", data);
 
@@ -40,7 +40,7 @@ const AllOrders = () => {
   const handleUpdateStatus = async () => {
     try {
       await axios.put(
-        `http://localhost:8080/api/v1/auth/order-status/${selectedOrder._id}`,
+        `https://fashionhubserver.vercel.app/api/v1/auth/order-status/${selectedOrder._id}`,
         { status }
       );
       message.success("Order status updated successfully!");

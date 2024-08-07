@@ -13,7 +13,7 @@ const SubscriberList = () => {
     const fetchSubscribers = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:8080/api/v1/subscriber/getsubscribers"
+          "https://fashionhubserver.vercel.app/api/v1/subscriber/getsubscribers"
         );
         setSubscribers(data.subscribers);
       } catch (error) {

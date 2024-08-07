@@ -12,7 +12,7 @@ const ContactForm = () => {
     const fetchContacts = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/v1/contact/getcontact"
+          "https://fashionhubserver.vercel.app/api/v1/contact/getcontact"
         );
         console.log(response.data);
 

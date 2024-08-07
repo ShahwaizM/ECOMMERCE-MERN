@@ -34,7 +34,7 @@ const Success = () => {
     const createOrder = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8080/api/v1/order/create-order",
+          "https://fashionhubserver.vercel.app/api/v1/order/create-order",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },

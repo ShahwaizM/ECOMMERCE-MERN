@@ -30,7 +30,7 @@ const ProductDetails = () => {
   const getProduct = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/get-product/${params.slug}`
+        `https://fashionhubserver.vercel.app/api/v1/product/get-product/${params.slug}`
       );
       setProduct(data?.product);
       getSimilarProduct(data?.product._id, data?.product.category._id);
@@ -42,7 +42,7 @@ const ProductDetails = () => {
   const getSimilarProduct = async (pid, cid) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/related-product/${pid}/${cid}`
+        `https://fashionhubserver.vercel.app/api/v1/product/related-product/${pid}/${cid}`
       );
       setRelatedProducts(data?.products);
     } catch (error) {
@@ -72,7 +72,7 @@ const ProductDetails = () => {
             <div class="col-md-6 col-lg-6 ">
               <div className="product-card card">
                 <img
-                  src={`http://localhost:8080/api/v1/product/product-photo/${product._id}`}
+                  src={`https://fashionhubserver.vercel.app/api/v1/product/product-photo/${product._id}`}
                   alt={product.name}
                   className="img-responsive card-img-top"
                 ></img>
@@ -147,7 +147,7 @@ const ProductDetails = () => {
                     <a onClick={() => navigate(`/product/${p.slug}`)}>
                       <img
                         class="img-responsive card-img-top"
-                        src={`http://localhost:8080/api/v1/product/product-photo/${p?._id}`}
+                        src={`https://fashionhubserver.vercel.app/api/v1/product/product-photo/${p?._id}`}
                         alt={p.name}
                       ></img>
                     </a>
