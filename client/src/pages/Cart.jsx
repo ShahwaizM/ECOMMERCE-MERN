@@ -24,7 +24,6 @@ const Cart = () => {
     removeItemFromCart,
   } = useCart();
 
-  // Total price calculation
   const totalPrice = () => {
     try {
       return cart
