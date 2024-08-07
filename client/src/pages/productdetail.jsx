@@ -159,14 +159,28 @@ const ProductDetails = () => {
                     </h4>
                     <div className="">
                       <button
-                        onClick={() => {
-                          setCart([...cart, product]);
-                          localStorage.setItem(
-                            "cart",
-                            JSON.stringify([...cart, product])
-                          );
-                          toast.success("Item Added to cart");
-                        }}
+                       onClick={() => {
+                    const existingItemIndex = cart.findIndex(
+                      (item) => item._id === product._id
+                    );
+
+                    let updatedCart;
+                    if (existingItemIndex >= 0) {
+                      // If the item exists, update the quantity
+                      updatedCart = cart.map((item, index) =>
+                        index === existingItemIndex
+                          ? { ...item, quantity: item.quantity + 1 }
+                          : item
+                      );
+                    } else {
+                      // If the item doesn't exist, add it with quantity 1
+                      updatedCart = [...cart, { ...product, quantity: 1 }];
+                    }
+
+                    setCart(updatedCart);
+                    localStorage.setItem("cart", JSON.stringify(updatedCart));
+                    toast.success("Item Added to cart");
+                  }}
                         className=" cart-btn"
                       >
                         {" "}
