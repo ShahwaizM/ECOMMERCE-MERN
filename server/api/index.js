@@ -1,16 +1,16 @@
 import express from "express";
 import dotenv from "dotenv";
 import morgan from "morgan";
-import connectDB from "./config/db.js";
-import authRoutes from "./routes/authRoute.js";
-import categoryRoutes from "./routes/categoryRoutes.js";
-import productRoutes from "./routes/productRoutes.js";
+import connectDB from "../config/db.js";
+import authRoutes from "../routes/authRoute.js";
+import categoryRoutes from "../routes/categoryRoutes.js";
+import productRoutes from "../routes/productRoutes.js";
 import cors from "cors";
 import bodyParser from "body-parser";
-import SubscriberRoutes from "./routes/SubscriberRoutes.js";
-import ContactRoutes from "./routes/contactRoutes.js";
-import stripeRoutes from "./routes/stripeRoutes.js";
-import orderRoutes from "./routes/orderRoutes.js";
+import SubscriberRoutes from "../routes/SubscriberRoutes.js";
+import ContactRoutes from "../routes/contactRoutes.js";
+import stripeRoutes from "../routes/stripeRoutes.js";
+import orderRoutes from "../routes/orderRoutes.js";
 //configure env
 dotenv.config();
 
