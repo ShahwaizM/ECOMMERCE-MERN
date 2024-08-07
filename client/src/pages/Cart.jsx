@@ -151,7 +151,7 @@ const Cart = () => {
                                   "en-US",
                                   {
                                     style: "currency",
-                                    currency: "PKR",
+                                    currency: "usd",
                                   }
                                 )}
                               </h6>
