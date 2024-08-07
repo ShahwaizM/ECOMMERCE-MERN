@@ -282,6 +282,7 @@ const Store = () => {
                                     currency: "usd",
                                   }
                                 )}</b>
+                          
                         </h4>
                         <button
                           onClick={() => {
