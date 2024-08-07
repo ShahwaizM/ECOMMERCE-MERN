@@ -189,7 +189,7 @@ export const updateProductController = async (req, res) => {
 // filtered product list based on page and filters
 export const productFiltersController = async (req, res) => {
   try {
-    const perPage = parseInt(req.query.pageSize) || 3; // Use query parameter for page size
+    const perPage = parseInt(req.query.pageSize) || 4; 
     const page = parseInt(req.params.page) || 1;
     const { checked, radio } = req.body;
     let query = {};
