@@ -23,13 +23,9 @@ const app = express();
 //middelwares
 app.use(
   cors({
-<<<<<<< HEAD
     origin: "https://fashionhub-five.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
-=======
-    origin: "https://fashionhub-five.vercel.app/",
->>>>>>> d6db0cf313f0aa6c4797e7c32574cb4ec1fd4845
   })
 );
 app.use(express.json());
