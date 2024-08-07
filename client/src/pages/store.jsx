@@ -275,7 +275,13 @@ const Store = () => {
                       )} */}
 
                         <h4 class="card-text">
-                          <b>{p.price}</b>
+                          <b>{(p.price).toLocaleString(
+                                  "en-US",
+                                  {
+                                    style: "currency",
+                                    currency: "PKR",
+                                  }
+                                )}</b>
                         </h4>
                         <button
                           onClick={() => {
