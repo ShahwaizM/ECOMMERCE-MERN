@@ -31,7 +31,7 @@ const Store = () => {
   const [pageSize, setPageSize] = useState(4);
   const [keyword, setKeyword] = useState("");
 
-  //get all cat
+  //get all category
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
