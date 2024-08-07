@@ -279,7 +279,7 @@ const Store = () => {
                                   "en-US",
                                   {
                                     style: "currency",
-                                    currency: "PKR",
+                                    currency: "usd",
                                   }
                                 )}</b>
                         </h4>
