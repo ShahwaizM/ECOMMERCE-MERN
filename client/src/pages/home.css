@@ -90,7 +90,7 @@ a:hover {
 .products img:hover {
   transform: scale(
     1.01
-  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  ); 
 }
 
 .banner,
@@ -104,7 +104,7 @@ a:hover {
   background-position: center 0;
 
   background-image: url("../assets/banner.jpg");
-  min-height: calc(800px);
+  min-height: calc(700px);
 }
 .banner2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0.5, 0.3)),
