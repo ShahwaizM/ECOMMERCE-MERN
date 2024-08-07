@@ -31,7 +31,7 @@ const Cart = () => {
         .reduce((total, item) => total + item.price * item.quantity, 0)
         .toLocaleString("en-US", {
           style: "currency",
-          currency: "PKR",
+          currency: "usd",
         });
     } catch (error) {
       console.log(error);
