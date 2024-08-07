@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Table } from "antd";
+import { Table, Button, Modal, Select, message } from "antd";
 import AdminSidebar from "../../components/adminsidebar";
+
+const { Option } = Select;
 
 const AllOrders = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [selectedOrder, setSelectedOrder] = useState(null);
+  const [status, setStatus] = useState("");
 
   useEffect(() => {
     const fetchAllOrders = async () => {
@@ -25,6 +30,31 @@ const AllOrders = () => {
 
     fetchAllOrders();
   }, []);
+
+  const handleEditClick = (order) => {
+    setSelectedOrder(order);
+    setStatus(order.status);
+    setIsModalVisible(true);
+  };
+
+  const handleUpdateStatus = async () => {
+    try {
+      await axios.put(
+        `http://localhost:8080/api/v1/auth/order-status/${selectedOrder._id}`,
+        { status }
+      );
+      message.success("Order status updated successfully!");
+      setOrders((prevOrders) =>
+        prevOrders.map((order) =>
+          order._id === selectedOrder._id ? { ...order, status } : order
+        )
+      );
+      setIsModalVisible(false);
+    } catch (error) {
+      console.error("Error updating order status:", error);
+      message.error("Failed to update order status.");
+    }
+  };
 
   const columns = [
     {
@@ -93,6 +123,15 @@ const AllOrders = () => {
       key: "createdAt",
       render: (date) => new Date(date).toLocaleDateString(),
     },
+    {
+      title: "Actions",
+      key: "actions",
+      render: (_, record) => (
+        <Button type="primary" onClick={() => handleEditClick(record)}>
+          Edit Status
+        </Button>
+      ),
+    },
   ];
 
   return (
@@ -108,6 +147,24 @@ const AllOrders = () => {
           rowKey="_id"
           pagination={{ pageSize: 10 }}
         />
+
+        <Modal
+          title="Update Order Status"
+          visible={isModalVisible}
+          onOk={handleUpdateStatus}
+          onCancel={() => setIsModalVisible(false)}
+        >
+          <Select
+            value={status}
+            onChange={(value) => setStatus(value)}
+            style={{ width: "100%" }}
+          >
+            <Option value="pending">Pending</Option>
+            <Option value="shipped">Shipped</Option>
+            <Option value="delivered">Delivered</Option>
+            <Option value="cancelled">Cancelled</Option>
+          </Select>
+        </Modal>
       </div>
     </div>
   );

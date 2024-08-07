@@ -55,9 +55,7 @@ export default function Navbarr() {
                 </>
               ) : (
                 auth?.user?.role == 0 && (
-                  <Nav.Link onClick={() => navigate("/orders")}>
-                    Orders
-                  </Nav.Link>
+                  <Nav.Link onClick={() => navigate("#")}>Orders</Nav.Link>
                 )
               )}
               {!auth?.user ? (

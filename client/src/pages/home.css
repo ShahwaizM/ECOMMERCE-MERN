@@ -3,6 +3,7 @@
   border: white;
   background-color: #fff;
 }
+
 .banner-title {
   max-width: 600px;
   text-align: left;
@@ -39,8 +40,7 @@ nav {
   background-color: transparent !important;
   font-size: 22px;
 }
-nav a,
-navbar-brand {
+nav a {
   color: rgb(79, 39, 47) !important;
   margin-left: 4px;
   font-size: 18px !important;
@@ -49,7 +49,11 @@ navbar-brand {
   text-align: start;
   cursor: pointer;
 }
-
+.navbar-brand {
+  font-weight: 800 !important;
+  font-size: 20px !important;
+  color: rgb(79, 39, 47);
+}
 .animated {
   animation-duration: 1.5s;
   animation-fill-mode: both;

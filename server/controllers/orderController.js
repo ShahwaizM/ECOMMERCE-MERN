@@ -99,3 +99,45 @@ export const getAllOrdersController = async (req, res) => {
     });
   }
 };
+//orders
+export const getOrdersController = async (req, res) => {
+  try {
+    const orders = await orderModel
+      .find({ userId: req.user._id })
+      .populate("products.productId", "name price")
+      .populate("userId", "name");
+
+    res.json(orders);
+  } catch (error) {
+    console.error("Error while getting orders:", error);
+    res.status(500).send({
+      success: false,
+      message: "Error while getting orders",
+      error,
+    });
+  }
+};
+//orders
+
+//order status
+export const orderStatusController = async (req, res) => {
+  try {
+    const { orderId } = req.params;
+    const { status } = req.body;
+
+    const order = await orderModel.findByIdAndUpdate(
+      orderId,
+      { status },
+      { new: true }
+    );
+
+    res.json(order);
+  } catch (error) {
+    console.error("Error while updating order:", error);
+    res.status(500).send({
+      success: false,
+      message: "Error while updating order",
+      error,
+    });
+  }
+};

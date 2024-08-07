@@ -4,6 +4,9 @@ import { BrowserRouter } from "react-router-dom";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import "./index.css";
+import "antd/dist/reset.css";
+import "react-toastify/dist/ReactToastify.css";
+
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "font-awesome/css/font-awesome.min.css";

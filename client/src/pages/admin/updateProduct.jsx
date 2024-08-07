@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-import toast from "react-hot-toast";
+import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 import { Select } from "antd";
 import { useNavigate, useParams } from "react-router-dom";
 import AdminSidebar from "../../components/adminsidebar";
+import "react-toastify/dist/ReactToastify.css";
+
 const { Option } = Select;
 
 const UpdateProduct = () => {
@@ -40,9 +42,7 @@ const UpdateProduct = () => {
   };
   useEffect(() => {
     getSingleProduct();
-    //eslint-disable-next-line
   }, []);
-  //get all category
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
@@ -104,10 +104,10 @@ const UpdateProduct = () => {
     }
   };
   return (
-    <div className="row">
+    <div className="admin-dashboard d-flex">
+      {" "}
       <AdminSidebar />
-
-      <div style={{ padding: "20px" }}>
+      <div class="col-md-9" style={{ padding: "20px" }}>
         <h1>Update Product</h1>
         <div className="m-1 w-75">
           <Select
