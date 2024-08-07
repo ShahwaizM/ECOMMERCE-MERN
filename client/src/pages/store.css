@@ -27,10 +27,10 @@
   margin: 0 auto;
   color: white;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 520px) {
   .store-title h1,
   .banner-title h1 {
-    font-size: 60px !important;
+    font-size: 45px !important;
   }
 }
 .store-title h1 {
