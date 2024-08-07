@@ -23,7 +23,7 @@ const app = express();
 //middelwares
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://fashionhub-five.vercel.app/",
   })
 );
 app.use(express.json());
