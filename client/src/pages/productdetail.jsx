@@ -82,7 +82,13 @@ const ProductDetails = () => {
               <h1>Product Description</h1>
               <h2>Name: {product.name}</h2>
               <h3>Category: {product?.category?.name}</h3>
-              <h4>Price: {product.price} PKR</h4>
+              <h4>Price:{(p.price).toLocaleString(
+                                  "en-US",
+                                  {
+                                    style: "currency",
+                                    currency: "usd",
+                                  }
+                                )}</h4>
               <br></br>
               <h3 class="black">Description: {product.description}</h3>
               <br></br>
@@ -155,7 +161,13 @@ const ProductDetails = () => {
                   <div class="card-body">
                     <h2 class="card-title">{p.name}</h2>
                     <h4 class="card-text">
-                      <b>{p.price}</b>
+                      <b>{(p.price).toLocaleString(
+                                  "en-US",
+                                  {
+                                    style: "currency",
+                                    currency: "usd",
+                                  }
+                                )}</b>
                     </h4>
                     <div className="">
                       <button
