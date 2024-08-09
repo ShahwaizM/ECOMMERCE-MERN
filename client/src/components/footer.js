@@ -136,16 +136,16 @@ const Foote = () => {
             <ul class="list">
               <li class="list-item">
                 <a onClick={() => navigate("tel:+353873671286")}>
-                  <FontAwesomeIcon icon={faPhone} /> +353873671286
+                  <FontAwesomeIcon icon={faPhone} /> +999999999999
                 </a>
               </li>
               <li class="list-item">
                 <a onClick={() => navigate("tel:+353873671286")}>
-                  <FontAwesomeIcon icon={faPhone} /> +353873671286
+                  <FontAwesomeIcon icon={faPhone} /> +999999999999
                 </a>
               </li>
               <li class="list-item">
-                <a onClick={() => navigate("mailto:Hellowrold@gmail.com")}>
+                <a onClick={() => navigate("mailto:FashionHub@gmail.com")}>
                   <FontAwesomeIcon icon={faEnvelope} /> FashionHub@gmail.com
                 </a>
               </li>
