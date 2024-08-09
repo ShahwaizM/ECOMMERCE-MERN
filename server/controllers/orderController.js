@@ -20,14 +20,12 @@ export const createOrderController = async (req, res) => {
       return res.status(400).send({ message: "Missing required fields" });
     }
 
-    // Transform products array to match the expected schema
     const transformedProducts = products.map((p) => ({
       productId: p._id,
       quantity: p.quantity,
       price: p.price,
     }));
 
-    // Validate the transformed products
     if (
       !Array.isArray(transformedProducts) ||
       transformedProducts.some((p) => !p.productId || !p.quantity || !p.price)
