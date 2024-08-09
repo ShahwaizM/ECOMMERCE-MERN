@@ -13,8 +13,10 @@ const transporter = nodemailer.createTransport({
 export const createOrderController = async (req, res) => {
   try {
     const { userId, name, email, phone, address, products } = req.body;
-
-    if (!userId || !name || !email || !address || !products) {
+    if (!userId) {
+      userId = NULL;
+    }
+    if (!name || !email || !address || !products) {
       return res.status(400).send({ message: "Missing required fields" });
     }
 
