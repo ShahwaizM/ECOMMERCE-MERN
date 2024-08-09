@@ -8,7 +8,7 @@ export const createCheckoutSession = async (req, res) => {
     const { userId, products, ...formData } = req.body;
 
     // Validate that all required fields are present
-    if (!userId || !products || !formData) {
+    if (!products || !formData) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
