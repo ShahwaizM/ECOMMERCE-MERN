@@ -1,7 +1,7 @@
 import Stripe from "stripe";
 const key = process.env.STRIPE_SECRET_KEY;
 const stripe = new Stripe(key);
-const url = "http://localhost:3000";
+const url = "https://fashionhub-five.vercel.app/";
 
 export const createCheckoutSession = async (req, res) => {
   try {
