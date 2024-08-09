@@ -25,7 +25,7 @@ const ProductDetails = () => {
   useEffect(() => {
     if (params?.slug) getProduct();
   }, [params?.slug]);
-  
+
   //getProduct
   const getProduct = async () => {
     try {
@@ -82,13 +82,13 @@ const ProductDetails = () => {
               <h1>Product Description</h1>
               <h2>Name: {product.name}</h2>
               <h3>Category: {product?.category?.name}</h3>
-              <h4>Price:{(p.price).toLocaleString(
-                                  "en-US",
-                                  {
-                                    style: "currency",
-                                    currency: "usd",
-                                  }
-                                )}</h4>
+              <h4>
+                Price:
+                {product.price.toLocaleString("en-US", {
+                  style: "currency",
+                  currency: "usd",
+                })}
+              </h4>
               <br></br>
               <h3 class="black">Description: {product.description}</h3>
               <br></br>
@@ -161,38 +161,43 @@ const ProductDetails = () => {
                   <div class="card-body">
                     <h2 class="card-title">{p.name}</h2>
                     <h4 class="card-text">
-                      <b>{(p.price).toLocaleString(
-                                  "en-US",
-                                  {
-                                    style: "currency",
-                                    currency: "usd",
-                                  }
-                                )}</b>
+                      <b>
+                        {p.price.toLocaleString("en-US", {
+                          style: "currency",
+                          currency: "usd",
+                        })}
+                      </b>
                     </h4>
                     <div className="">
                       <button
-                       onClick={() => {
-                    const existingItemIndex = cart.findIndex(
-                      (item) => item._id === product._id
-                    );
+                        onClick={() => {
+                          const existingItemIndex = cart.findIndex(
+                            (item) => item._id === product._id
+                          );
 
-                    let updatedCart;
-                    if (existingItemIndex >= 0) {
-                      // If the item exists, update the quantity
-                      updatedCart = cart.map((item, index) =>
-                        index === existingItemIndex
-                          ? { ...item, quantity: item.quantity + 1 }
-                          : item
-                      );
-                    } else {
-                      // If the item doesn't exist, add it with quantity 1
-                      updatedCart = [...cart, { ...product, quantity: 1 }];
-                    }
+                          let updatedCart;
+                          if (existingItemIndex >= 0) {
+                            // If the item exists, update the quantity
+                            updatedCart = cart.map((item, index) =>
+                              index === existingItemIndex
+                                ? { ...item, quantity: item.quantity + 1 }
+                                : item
+                            );
+                          } else {
+                            // If the item doesn't exist, add it with quantity 1
+                            updatedCart = [
+                              ...cart,
+                              { ...product, quantity: 1 },
+                            ];
+                          }
 
-                    setCart(updatedCart);
-                    localStorage.setItem("cart", JSON.stringify(updatedCart));
-                    toast.success("Item Added to cart");
-                  }}
+                          setCart(updatedCart);
+                          localStorage.setItem(
+                            "cart",
+                            JSON.stringify(updatedCart)
+                          );
+                          toast.success("Item Added to cart");
+                        }}
                         className=" cart-btn"
                       >
                         {" "}

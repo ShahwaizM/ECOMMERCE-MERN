@@ -23,7 +23,6 @@ import ContactForm from "./pages/admin/contactform";
 import SubscriberList from "./pages/admin/subscribers";
 import Success from "./pages/success";
 import AllOrders from "./pages/admin/getorders";
-import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
