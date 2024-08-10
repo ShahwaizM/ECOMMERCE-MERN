@@ -89,7 +89,7 @@ const Contact = () => {
                 </p>
                 <p>
                   <a style={{ color: "white" }} href="tel:+3125800367">
-                    <i className="orange fa fa-phone">&nbsp;</i> +33125800367{" "}
+                    <i className="orange fa fa-phone">&nbsp;</i> +99999999999{" "}
                   </a>
                 </p>
                 <br />
@@ -99,8 +99,9 @@ const Contact = () => {
                     style={{ color: "white" }}
                     href="https://maps.app.goo.gl/tTkwcCrmM5U138uM9"
                   >
-                    <i className="fa orange fa-map-marker">&nbsp;</i> I9/4,
-                    Islamabad, Pakistan
+                    <i className="fa orange fa-map-marker">&nbsp;</i>  Block 1, Blackrock
+                  Business Park, Carysfort Ave, Newtown Blackrock, Blackrock,
+                  Co. Dublin, Ireland
                   </a>
                 </p>
                 <p style={{ fontWeight: "lighter" }}>
