@@ -16,37 +16,41 @@ export default function Login() {
   const location = useLocation();
 
   // form function
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await axios.post(
-        "https://fashionhubserver.vercel.app/api/v1/auth/login",
-        {
-          email,
-          password,
-        }
-      );
-
-      if (res && res.data.success) {
-        toast.success(res.data.message);
-        console.log(res.data && res.data.message);
-        setAuth({
-          ...auth,
-          user: res.data.user,
-          token: res.data.token,
-        });
-        localStorage.setItem("auth", JSON.stringify(res.data));
-        navigate(location.state || "/");
-      } else {
-        error = setError(res.data.message);
-        toast.error(res.data.message);
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const res = await axios.post(
+      "https://fashionhubserver.vercel.app/api/v1/auth/login",
+      {
+        email,
+        password,
       }
-    } catch (error) {
-      console.log(error);
+    );
 
-      console.log("Something went wrong");
+    if (res && res.data.success) {
+      toast.success(res.data.message);
+      setAuth({
+        ...auth,
+        user: res.data.user,
+        token: res.data.token,
+      });
+      localStorage.setItem("auth", JSON.stringify(res.data));
+      
+      if (res.data.user.role === 1) {
+        navigate("/adminDashboard"); // Redirect to admin dashboard
+      } else {
+        navigate(location.state || "/"); // Redirect to homepage
+      }
+    } else {
+      setError(res.data.message);
+      toast.error(res.data.message);
     }
-  };
+  } catch (error) {
+    console.log(error);
+    toast.error("Something went wrong");
+  }
+};
+
   return (
     <>
       <div className="container-fluid store-banner store-detail">
