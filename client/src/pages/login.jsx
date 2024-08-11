@@ -36,7 +36,7 @@ const handleSubmit = async (e) => {
       });
       localStorage.setItem("auth", JSON.stringify(res.data));
       
-      if (res.data.user.role === 1) {
+      if (auth.user.role === 1) {
         navigate("/adminDashboard"); // Redirect to admin dashboard
       } else {
         navigate(location.state || "/"); // Redirect to homepage
