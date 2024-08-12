@@ -24,7 +24,6 @@
 .products-section {
   background-color: rgb(241 241 241);
   padding-bottom: 30px;
-  font-family: cursive;
 }
 .banner-title h1 {
   font-size: 80px;
@@ -44,7 +43,6 @@ nav a {
   color: rgb(79, 39, 47) !important;
   margin-left: 4px;
   font-size: 18px !important;
-  font-family: cursive !important;
   font-weight: 600 !important;
   text-align: start;
   cursor: pointer;
